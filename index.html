@@ -2,43 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Azeem - Songwriter & Beatmaker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azeem – Songwriter & Beatmaker</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0b0f;
+      color: #e5e5e5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(180deg, #12002f, #0b0b0f);
+      color: #b57bff;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cfcfcf;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      color: #b57bff;
+      font-size: 1.8rem;
+      border-left: 4px solid #b57bff;
+      padding-left: 10px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      color: #d0cfd3;
+    }
+
+    .audio-player {
+      background: #1a1a24;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(181, 123, 255, 0.3);
+      margin-top: 1rem;
+    }
+
+    audio {
+      width: 100%;
+      outline: none;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .photo-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(181, 123, 255, 0.3);
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #999;
+      border-top: 1px solid #222;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Azeem's Music Page</h1>
-  <p>Enjoy my latest tracks:</p>
+  <header>
+    <h1>Azeem – Songwriter & Beatmaker</h1>
+    <p>R&B • Soul • Funk • Modern Vibes</p>
+  </header>
 
-  <h2>Track 1: AUD-20250513-WA0012</h2>
-  <audio controls>
-    <source src="AUD-20250513-WA0012.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <div class="container">
+    <section id="about">
+      <h2>About Azeem</h2>
+      <p>I’m an R&B songwriter and composer with over 18 years of experience creating songs that blend emotion, groove, and timeless storytelling. I’ve written more than 30 original songs and released my own album — all streaming now on Spotify and YouTube. My music carries the richness and flavor of classic soul, layered with melodies and emotion that resonate with today’s sound.</p>
+      <p>My inspiration comes from the legends who shaped the art of R&B — Stevie Wonder, Michael Jackson, R. Kelly, Usher, Ne-Yo, Boyz II Men, Joe, The Weeknd, Bruno Mars, and D’Angelo — artists who understood that true music lives in feeling, truth, and timeless grooves. But my foundation runs even deeper, rooted in the disco and funk era, shaped by icons like James Brown, The Gap Band, and Kool & The Gang, whose rhythms, horns, and energy gave birth to the sound that still moves the world today.</p>
+      <p>I play piano and guitar, and I’m deeply involved in every part of my creative process — from songwriting and arranging to shaping the tone, rhythm, and soul of each track. My music reflects years of studying and absorbing the evolution of R&B, funk, and soul — giving my compositions a depth and authenticity that listeners can instantly feel.</p>
+      <p>Now based in Canada, I’m expanding my reach to collaborate and pitch songs to R&B artists in the U.S., connecting with voices that want to tell real stories through melody and soul. If you’re looking for songs that groove, move, and last — let’s create something unforgettable.</p>
 
-  <h2>Track 2: My Moonlight Sonata</h2>
-  <audio controls>
-    <source src="My moonlight sonata (Export).mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+      <div class="photo-gallery">
+        <img src="20250417_170900.jpg" alt="Azeem photo 1">
+        <img src="downloadfile-24.jpg" alt="Azeem photo 2">
+        <img src="downloadfile-14.jpg" alt="Azeem photo 3">
+      </div>
+    </section>
 
-  <h2>Track 3: This is How I Feel</h2>
-  <audio controls>
-    <source src="This is how I feel music track Key of E.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+    <section id="featured-beat">
+      <h2>🎧 Featured Beat</h2>
+      <div class="audio-player">
+        <audio controls>
+          <source src="azeem_featured_beat_trimmed.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
 
-  <h2>Track 4: Second Beat</h2>
-  <audio controls>
-    <source src="azeem_second_beat_trimmed.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio> 
+    <section id="more-beats">
+      <h2>🎶 More Beats</h2>
+      <div class="audio-player">
+        <audio controls>
+          <source src="azeem_second_beat_trimmed.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Azeem | All Rights Reserved</p>
+  </footer>
 </body>
-  <h1>Welcome to Azeem's Music Page</h1>
-<p><strong>About Me:</strong>I’m an R&B songwriter and composer with over 18 years of experience creating songs that blend emotion, groove, and timeless storytelling. I’ve written more than 30 original songs and released my own album — all streaming now on Spotify and YouTube. My music carries the richness and flavor of classic soul, layered with melodies and emotion that resonate with today’s sound.
-
-My inspiration comes from the legends who shaped the art of R&B — Stevie Wonder, Michael Jackson, R. Kelly, Usher, Ne-Yo, Boyz II Men, Joe, The Weeknd, Bruno Mars, and D’Angelo — artists who understood that true music lives in feeling, truth, and timeless grooves. But my foundation runs even deeper, rooted in the disco and funk era, shaped by icons like James Brown, The Gap Band, and Kool & The Gang, whose rhythms, horns, and energy gave birth to the sound that still moves the world today.
-
-I play piano and guitar, and I’m deeply involved in every part of my creative process — from songwriting and arranging to shaping the tone, rhythm, and soul of each track. My music reflects years of studying and absorbing the evolution of R&B, funk, and soul — giving my compositions a depth and authenticity that listeners can instantly feel...</p>
-
-
-Now based in Canada, I’m expanding my reach to collaborate and pitch songs to R&B artists in the U.S., connecting with voices that want to tell real stories through melody and soul. If you’re looking for songs that groove, move, and last — let’s create something unforgettable.
 </html>
+
