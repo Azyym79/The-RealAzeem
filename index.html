@@ -3,142 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Azeem — R&B Composer</title>
+  <title>Azeem – Songwriter & Beatmaker</title>
   <style>
     body {
       margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #1b1b1f, #3e2c23);
-      color: #f3e5d0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1c1a1a, #3c2f2f, #6b4e2e);
+      color: #f2e5d5;
       overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 60px 20px 20px;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
     }
 
     header h1 {
       font-size: 2.8em;
-      letter-spacing: 2px;
       margin: 0;
-      color: #ffd48a;
+      color: #f7d7a3;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     header p {
-      font-size: 1.1em;
+      font-size: 1.2em;
+      color: #e0c39c;
       margin-top: 10px;
-      color: #d6c1a2;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
     }
 
     .bio {
+      max-width: 800px;
+      margin: 40px auto;
       font-size: 1.1em;
-      line-height: 1.7;
-      color: #f1e5cd;
+      line-height: 1.6;
       text-align: center;
+      padding: 0 20px;
+      color: #f4e9dc;
       background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 215, 150, 0.1);
+      animation: fadeIn 1.5s ease-in;
     }
 
-    h2 {
-      text-align: center;
-      color: #ffd48a;
-      font-size: 1.8em;
-      margin-top: 60px;
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(15px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
-    .tracks {
+    .beats-section {
+      max-width: 1100px;
+      margin: 50px auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
+      gap: 30px;
+      padding: 0 20px 80px;
     }
 
-    .track-card {
+    .beat-card {
       background: rgba(255, 255, 255, 0.06);
       border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 200, 120, 0.15);
       padding: 20px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .track-card:hover {
-      transform: translateY(-6px);
+    .beat-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255, 200, 120, 0.3);
     }
 
-    .track-title {
-      margin-top: 10px;
-      font-size: 1.1em;
-      font-weight: 600;
-      color: #ffe2b0;
+    .beat-card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .beat-card h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #f7d7a3;
+    }
+
+    audio {
+      width: 100%;
+      outline: none;
     }
 
     footer {
       text-align: center;
-      margin: 60px 0 30px;
+      padding: 30px 10px;
+      color: #bfa78a;
       font-size: 0.9em;
-      color: #cbb7a0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Placeholder styling for when you add images back */
-    .img-placeholder {
-      width: 100%;
-      height: 220px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #a99276;
-      font-size: 0.9em;
+    footer a {
+      color: #f7d7a3;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
-
 <body>
+
   <header>
     <h1>Azeem</h1>
-    <p>R&B Composer | Soulful Melodies | Timeless Sound</p>
+    <p>R&B Songwriter • Composer • Beatmaker</p>
   </header>
 
   <section class="bio">
     <p>
-      I’m Azeem — an R&B composer with a passion for soulful, emotionally rich music that blends classic 90s vibes with a modern touch. My work captures depth, groove, and melody — created for artists seeking authentic, high-quality songs that move people.
+      I’m Azeem — a songwriter and beatmaker crafting soulful R&B music that blends smooth grooves, real emotion, and timeless storytelling. 
+      My sound is inspired by legends like Stevie Wonder, Usher, Ne-Yo, D’Angelo, and The Weeknd — music made to move you. 
+      I’m now collaborating with artists ready to create heartfelt, radio-ready R&B tracks that last.
     </p>
   </section>
 
-  <section>
-    <h2>Featured Tracks</h2>
-    <div class="tracks">
-      <div class="track-card">
-        <div class="img-placeholder">Album Art Placeholder</div>
-        <div class="track-title">This Is How I Feel</div>
-      </div>
-      <div class="track-card">
-        <div class="img-placeholder">Album Art Placeholder</div>
-        <div class="track-title">My Moonlight Sonata</div>
-      </div>
-      <div class="track-card">
-        <div class="img-placeholder">Album Art Placeholder</div>
-        <div class="track-title">You Make Me Fall In Love Again</div>
-      </div>
-      <div class="track-card">
-        <div class="img-placeholder">Album Art Placeholder</div>
-        <div class="track-title">I Want You, I Need You</div>
-      </div>
+  <section class="beats-section">
+    <div class="beat-card">
+      <img src="this-is-how-i-feel.jpg" alt="This is How I Feel" />
+      <h3>This is How I Feel</h3>
+      <audio controls>
+        <source src="this-is-how-i-feel.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="beat-card">
+      <img src="my-moonlight-sonata.jpg" alt="My Moonlight Sonata" />
+      <h3>My Moonlight Sonata</h3>
+      <audio controls>
+        <source src="my-moonlight-sonata.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="beat-card">
+      <img src="you-make-me-fall-in-love-again.jpg" alt="You Make Me Fall in Love Again" />
+      <h3>You Make Me Fall in Love Again</h3>
+      <audio controls>
+        <source src="you-make-me-fall-in-love-again.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="beat-card">
+      <img src="i-want-you-i-need-you.jpg" alt="I Want You I Need You" />
+      <h3>I Want You I Need You</h3>
+      <audio controls>
+        <source src="i-want-you-i-need-you.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </section>
 
   <footer>
-    © 2025 Azeem — All rights reserved.
+    <p>© 2025 Azeem. All Rights Reserved.</p>
+    <p>
+      <a href="#">Spotify</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Instagram</a>
+    </p>
   </footer>
+
 </body>
 </html>
