@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Azeem – Songwriter & Beatmaker</title>
+  <style>
+    :root{
+      --bg1:#3b2620; --bg2:#5a3a32; --accent:#ffcc80; --muted:#e8d9c3;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--muted);line-height:1.6;
+    }
+    header{padding:56px 20px 28px;text-align:center}
+    h1{margin:0;font-size:2.6rem;color:var(--accent);text-shadow:0 0 12px rgba(255,204,128,0.15)}
+    p.lead{max-width:900px;margin:14px auto 0;color:#f1e6d4}
+    .gallery{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:28px 16px}
+    .gallery img{width:260px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6);transition:transform .35s,box-shadow .35s}
+    .gallery img:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.7)}
+    .beats{max-width:980px;margin:28px auto;padding:20px}
+    .beats h2{text-align:center;color:var(--accent);font-size:2rem;margin-bottom:18px}
+    .track{background:rgba(255,255,255,0.04);padding:16px;border-radius:12px;margin:16px auto;max-width:600px;box-shadow:0 8px 30px rgba(0,0,0,0.45)}
+    .track h3{margin:0 0 8px;color:#ffdca3;animation:glow 3s infinite ease-in-out}
+    audio{width:100%;border-radius:8px;outline:none}
+    @keyframes glow{
+      0%,100%{text-shadow:0 0 6px rgba(255,204,128,0.22)}
+      50%{text-shadow:0 0 14px rgba(255,204,128,0.6)}
+    }
+    footer{padding:28px 12px;text-align:center;color:#c9ae8e}
+    /* Floating Contact Button */
+    .contact-btn{position:fixed;right:22px;bottom:22px;padding:12px 18px;border-radius:40px;background:linear-gradient(135deg,#b17a3e,#f7d7a3);color:#1b120f;border:none;box-shadow:0 8px 26px rgba(0,0,0,0.45);cursor:pointer}
+    .contact-btn:hover{transform:translateY(-3px)}
+    /* Modal */
+    .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:20px;z-index:9999}
+    .modal .card{background:#2a1f1b;padding:22px;border-radius:12px;max-width:460px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+    .modal input,.modal textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:0;background:#3b2c25;color:var(--muted)}
+    .modal button{margin-top:8px;padding:10px 14px;border-radius:8px;border:0;background:linear-gradient(135deg,#b17a3e,#f7d7a3);cursor:pointer}
+    @media (max-width:640px){ .gallery img{width:48vw} h1{font-size:1.9rem} }
+  </style>
+</head>
+<body>
 
+  <header>
+    <h1>Azeem</h1>
+    <p class="lead">High-quality R&B songs and beats — crafted with groove, melody and emotion. Available for collaboration and song placements.</p>
+  </header>
+
+  <!-- GALLERY — ensure these image files exist in repo root with exact names -->
+  <div class="gallery" aria-hidden="false">
+    <img src="this-is-how-i-feel.jpg" alt="This Is How I Feel">
+    <img src="my-moonlight-sonata.jpg" alt="My Moonlight Sonata">
+    <img src="you-make-me-fall-in-love-again.jpg" alt="You Make Me Fall in Love Again">
+    <img src="i-want-you-i-need-you.jpg" alt="I Want You I Need You">
+  </div>
+
+  <!-- BEATS — ensure mp3 files are in repo root with exact names -->
+  <main class="beats">
+    <h2>Featured Beats</h2>
+
+    <div class="track">
+      <h3>This Is How I Feel</h3>
+      <audio controls preload="metadata">
+        <source src="this-is-how-i-feel.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="track">
+      <h3>My Moonlight Sonata</h3>
+      <audio controls preload="metadata">
+        <source src="my-moonlight-sonata.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="track">
+      <h3>You Make Me Fall in Love Again</h3>
+      <audio controls preload="metadata">
+        <source src="you-make-me-fall-in-love-again.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="track">
+      <h3>I Want You I Need You</h3>
+      <audio controls preload="metadata">
+        <source src="i-want-you-i-need-you.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Azeem — Songwriter & Beatmaker • <a href="#">Spotify</a> • <a href="#">YouTube</a>
+  </footer>
+
+  <!-- Contact button + modal -->
+  <button class="contact-btn" onclick="openModal()">🎵 Contact / Collaborate</button>
+
+  <div class="modal" id="modal">
+    <div class="card">
+      <h3 style="color:#ffdca3;margin:0 0 10px;">Let's Collaborate</h3>
+      <form action="https://formspree.io/f/mnnqqyvd" method="POST">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" placeholder="Your email" type="email" required>
+        <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div style="text-align:right;margin-top:8px"><a href="#" style="color:#ffdca3;text-decoration:none" onclick="closeModal();return false;">Close</a></div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(){document.getElementById('modal').style.display='flex'}
+    function closeModal(){document.getElementById('modal').style.display='none'}
+    window.onclick = function(e){ if(e.target===document.getElementById('modal')) closeModal() }
+  </script>
+</body>
+</html>
