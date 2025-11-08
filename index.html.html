@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Real Azeem | R&B Beats</title>
+
+  <style>
+    /* Midnight Bronze Theme */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #1a0f0a, #2c1e16, #4b2e1f);
+      color: #f5ede2;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 2.5rem 1rem 1rem;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      letter-spacing: 2px;
+      color: #ffb673;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #e9d6b4;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.2rem;
+    }
+
+    .bio {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #f2e4cf;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 0 20px rgba(255, 183, 115, 0.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      margin: 0.3rem 0;
+      font-size: 1.2rem;
+      color: #ffb673;
+    }
+
+    audio {
+      width: 100%;
+      outline: none;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem 0;
+      background: rgba(0, 0, 0, 0.4);
+      color: #d7c5ac;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .bio { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>The Real Azeem</h1>
+    <h2>Soulful R&B Beats & Compositions</h2>
+  </header>
+
+  <section class="bio">
+    <p>
+      I’m Azeem — an R&B composer and songwriter with over 18 years in the music scene.  
+      My sound blends the soul of the 80s and 90s with today’s emotion and groove.  
+      If you’re an artist looking for that rich melodic R&B feel with depth and flavor, you’re in the right place.
+    </p>
+  </section>
+
+  <section>
+    <h2>Featured Beats</h2>
+
+    <div class="gallery">
+      <div class="card">
+        <img src="images/this_is_how_i_feel.jpg" alt="This Is How I Feel Cover" />
+        <h3>This Is How I Feel</h3>
+        <audio controls>
+          <source src="audio/this_is_how_i_feel.mp3" type="audio/mpeg" />
+          Your browser doesn’t support the audio element.
+        </audio>
+      </div>
+
+      <div class="card">
+        <img src="images/my_moonlight_sonata.jpg" alt="My Moonlight Sonata Cover" />
+        <h3>My Moonlight Sonata</h3>
+        <audio controls>
+          <source src="audio/my_moonlight_sonata.mp3" type="audio/mpeg" />
+          Your browser doesn’t support the audio element.
+        </audio>
+      </div>
+
+      <div class="card">
+        <img src="images/you_make_me_fall_in_love_again.jpg" alt="You Make Me Fall in Love Again Cover" />
+        <h3>You Make Me Fall in Love Again</h3>
+        <audio controls>
+          <source src="audio/you_make_me_fall_in_love_again.mp3" type="audio/mpeg" />
+          Your browser doesn’t support the audio element.
+        </audio>
+      </div>
+
+      <div class="card">
+        <img src="images/i_want_you_i_need_you.jpg" alt="I Want You I Need You Cover" />
+        <h3>I Want You I Need You</h3>
+        <audio controls>
+          <source src="audio/i_want_you_i_need_you.mp3" type="audio/mpeg" />
+          Your browser doesn’t support the audio element.
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 The Real Azeem | All Rights Reserved
+  </footer>
+</body>
+</html>
