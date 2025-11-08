@@ -6,13 +6,14 @@
   <title>The Real Azeem | R&B Beats</title>
 
   <style>
-    /* Midnight Bronze Theme */
+    /* === Midnight Bronze Theme === */
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
       background: linear-gradient(135deg, #1a0f0a, #2c1e16, #4b2e1f);
       color: #f5ede2;
       text-align: center;
+      overflow-x: hidden;
       min-height: 100vh;
     }
 
@@ -20,10 +21,11 @@
       padding: 2.5rem 1rem 1rem;
       background: rgba(0, 0, 0, 0.4);
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+      animation: fadeInDown 1.2s ease;
     }
 
     h1 {
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       letter-spacing: 2px;
       color: #ffb673;
       margin-bottom: 0.5rem;
@@ -49,6 +51,7 @@
       border-radius: 16px;
       padding: 1.5rem;
       box-shadow: 0 0 20px rgba(255, 183, 115, 0.1);
+      animation: fadeInUp 1.5s ease;
     }
 
     .gallery {
@@ -56,6 +59,7 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
+      animation: fadeIn 2s ease;
     }
 
     .card {
@@ -64,7 +68,14 @@
       padding: 1rem;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+      opacity: 0;
+      animation: fadeInUp 1.3s ease forwards;
     }
+
+    .card:nth-child(1) { animation-delay: 0.4s; }
+    .card:nth-child(2) { animation-delay: 0.7s; }
+    .card:nth-child(3) { animation-delay: 1.0s; }
+    .card:nth-child(4) { animation-delay: 1.3s; }
 
     .card:hover {
       transform: translateY(-6px);
@@ -92,12 +103,80 @@
       border-radius: 8px;
     }
 
+    .contact {
+      margin-top: 4rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 2rem;
+      border-radius: 18px;
+      box-shadow: 0 0 20px rgba(255, 183, 115, 0.1);
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .contact h2 {
+      color: #ffb673;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      font-size: 1.05rem;
+      color: #f5ede2;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #ffb673;
+      color: #1a0f0a;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .contact a:hover {
+      background: #ffd5a4;
+      transform: translateY(-2px);
+    }
+
+    .social {
+      margin-top: 1.5rem;
+    }
+
+    .social a {
+      margin: 0 0.5rem;
+      color: #ffb673;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social a:hover {
+      color: #ffd5a4;
+    }
+
     footer {
       margin-top: 3rem;
       padding: 1rem 0;
       background: rgba(0, 0, 0, 0.4);
       color: #d7c5ac;
       font-size: 0.9rem;
+    }
+
+    /* === Animations === */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @media (max-width: 600px) {
@@ -115,9 +194,8 @@
 
   <section class="bio">
     <p>
-      I’m Azeem — an R&B composer and songwriter with over 18 years in the music scene.  
-      My sound blends the soul of the 80s and 90s with today’s emotion and groove.  
-      If you’re an artist looking for that rich melodic R&B feel with depth and flavor, you’re in the right place.
+      I’m Azeem — an R&B composer and songwriter with over 18 years of experience creating music that blends emotion, groove, and timeless storytelling.  
+      My beats are built for artists who want their songs to feel *alive* — soulful, modern, and unforgettable.
     </p>
   </section>
 
@@ -126,40 +204,49 @@
 
     <div class="gallery">
       <div class="card">
-        <img src="images/this_is_how_i_feel.jpg" alt="This Is How I Feel Cover" />
+        <img src="this_is_how_i_feel.jpg" alt="This Is How I Feel Cover" />
         <h3>This Is How I Feel</h3>
         <audio controls>
-          <source src="audio/this_is_how_i_feel.mp3" type="audio/mpeg" />
-          Your browser doesn’t support the audio element.
+          <source src="this_is_how_i_feel.mp3" type="audio/mpeg" />
         </audio>
       </div>
 
       <div class="card">
-        <img src="images/my_moonlight_sonata.jpg" alt="My Moonlight Sonata Cover" />
+        <img src="my_moonlight_sonata.jpg" alt="My Moonlight Sonata Cover" />
         <h3>My Moonlight Sonata</h3>
         <audio controls>
-          <source src="audio/my_moonlight_sonata.mp3" type="audio/mpeg" />
-          Your browser doesn’t support the audio element.
+          <source src="my_moonlight_sonata.mp3" type="audio/mpeg" />
         </audio>
       </div>
 
       <div class="card">
-        <img src="images/you_make_me_fall_in_love_again.jpg" alt="You Make Me Fall in Love Again Cover" />
-        <h3>You Make Me Fall in Love Again</h3>
-        <audio controls>
-          <source src="audio/you_make_me_fall_in_love_again.mp3" type="audio/mpeg" />
-          Your browser doesn’t support the audio element.
-        </audio>
-      </div>
-
-      <div class="card">
-        <img src="images/i_want_you_i_need_you.jpg" alt="I Want You I Need You Cover" />
+        <img src="i_want_you_i_need_you.jpg" alt="I Want You I Need You Cover" />
         <h3>I Want You I Need You</h3>
         <audio controls>
-          <source src="audio/i_want_you_i_need_you.mp3" type="audio/mpeg" />
-          Your browser doesn’t support the audio element.
+          <source src="i_want_you_i_need_you.mp3" type="audio/mpeg" />
         </audio>
       </div>
+
+      <div class="card">
+        <h3>You Make Me Fall in Love Again</h3>
+        <audio controls>
+          <source src="you_make_me_fall_in_love_again.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Let’s Collab</h2>
+    <p>
+      Have a song idea, need a custom R&B beat, or want to collaborate on a project?  
+      Reach out — I’m always open to working with passionate artists and producers.
+    </p>
+    <a href="mailto:azeembeats@gmail.com">Email Me</a>
+    <div class="social">
+      <a href="https://instagram.com/therealazeem" target="_blank">Instagram</a> |
+      <a href="https://youtube.com/@therealazeem" target="_blank">YouTube</a> |
+      <a href="https://soundcloud.com/therealazeem" target="_blank">SoundCloud</a>
     </div>
   </section>
 
