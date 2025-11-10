@@ -4,144 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Azeem Beats • R&B Composer</title>
-  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="description" content="Azeem (Soule Allaoui) — R&B/Soul songwriter and composer. Listen to demos, collaborate, and request custom songs." />
+  <style>
+    :root {
+      --bronze: #c98a36;
+      --bronze-dark: #7a5320;
+      --midnight: #0b0a09;
+      --midnight-light: #1a1715;
+    }
+    body {
+      background-color: var(--midnight);
+      color: #f8f7f5;
+    }
+    .bronze {
+      color: var(--bronze);
+    }
+    .bg-bronze {
+      background-color: var(--bronze);
+    }
+    .border-bronze {
+      border-color: var(--bronze-dark);
+    }
+    .hover\:bg-bronze-dark:hover {
+      background-color: var(--bronze-dark);
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
-  <!-- Top Bar / Hero -->
-  <header class="w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-30">
+
+<body class="min-h-screen flex flex-col font-sans">
+  <!-- Header -->
+  <header class="w-full border-b border-bronze-dark bg-black/70 backdrop-blur sticky top-0 z-30">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="h-9 w-9 rounded-full bg-amber-500/80 flex items-center justify-center text-slate-950 font-bold tracking-tight">A</div>
+        <div class="h-9 w-9 rounded-full bg-bronze flex items-center justify-center text-black font-bold">A</div>
         <div>
-          <h1 class="text-lg font-semibold tracking-tight">Azeem Beats</h1>
-          <p class="text-xs text-slate-400">R&B • Soul • Afro-vibes</p>
+          <h1 class="text-lg font-semibold tracking-tight text-bronze">Azeem Beats</h1>
+          <p class="text-xs text-gray-300">R&B • Soul • Afro-vibes</p>
         </div>
       </div>
       <nav class="flex gap-4 text-sm">
-        <a href="#music" class="text-slate-200 hover:text-amber-400">Music</a>
-        <a href="#about" class="text-slate-200 hover:text-amber-400">About</a>
-        <a href="#contact" class="text-slate-200 hover:text-amber-400">Collab</a>
+        <a href="#music" class="hover:text-bronze">Music</a>
+        <a href="#about" class="hover:text-bronze">About</a>
+        <a href="#contact" class="hover:text-bronze">Collab</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="max-w-6xl mx-auto px-4 pt-10 pb-6">
     <div class="grid gap-8 md:grid-cols-2 items-center">
       <div>
-        <p class="text-xs uppercase tracking-[0.35em] text-amber-300 mb-3">Singer • Songwriter • Composer</p>
+        <p class="text-xs uppercase tracking-[0.35em] text-bronze mb-3">Singer • Songwriter • Composer</p>
         <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Smooth R&B stories, made to be sung.</h2>
-        <p class="text-slate-300 mb-6 leading-relaxed">
+        <p class="text-gray-300 mb-6 leading-relaxed">
           I write and compose modern R&B with the flavour of the 80s, 90s, early 2000s — think MJ, Stevie, R. Kelly, D’Angelo, James Brown groove. 
           Listen to the demos below and reach out if you want something custom.
         </p>
-        <a href="#music" class="inline-flex items-center gap-2 bg-amber-400 text-slate-950 px-5 py-2 rounded-full text-sm font-semibold hover:bg-amber-300 transition">
+        <a href="#music" class="inline-flex items-center gap-2 bg-bronze text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-bronze-dark transition">
           ▶ Listen to tracks
         </a>
       </div>
-      <div class="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/60 rounded-2xl p-5 shadow-xl">
-        <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-3">Featured demo</p>
+      <div class="bg-[var(--midnight-light)] border border-bronze-dark rounded-2xl p-5 shadow-xl">
+        <p class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">Featured demo</p>
         <p class="text-xl font-medium mb-2">“My Moonlight Sonata”</p>
-        <p class="text-sm text-slate-300 mb-4">Romantic, soulful, and melodic — perfect for a strong R&B vocalist.</p>
-        <div class="rounded-xl overflow-hidden bg-slate-900/40 border border-slate-700/70 p-3">
-          <audio controls class="w-full">
-            <source src="audio/my-moonlight-sonata.mp3" type="audio/mpeg" />
+        <p class="text-sm text-gray-300 mb-4">Romantic, soulful, and melodic — perfect for a strong R&B vocalist.</p>
+        <div class="rounded-xl overflow-hidden border border-bronze-dark p-3 bg-black/40">
+          <audio controls preload="metadata" class="w-full">
+            <source src="./audio/my-moonlight-sonata.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
-        <p class="text-xs text-slate-500 mt-3">Tip: make sure your <strong>audio/my-moonlight-sonata.mp3</strong> file exists in that path.</p>
       </div>
     </div>
   </section>
 
-  <!-- Music Section -->
+  <!-- Music -->
   <section id="music" class="max-w-6xl mx-auto px-4 py-8">
     <div class="flex items-center justify-between mb-5">
-      <h3 class="text-2xl font-semibold tracking-tight">Tracks</h3>
-      <p class="text-xs text-slate-400">6 demos available • MP3 • for listening & pitching</p>
+      <h3 class="text-2xl font-semibold tracking-tight text-bronze">Tracks</h3>
+      <p class="text-xs text-gray-400">6 demos available • MP3 • for listening & pitching</p>
     </div>
 
-    <!-- Grid of songs -->
     <div class="grid gap-6 md:grid-cols-3">
-      <!-- 1: I Want You I Need You -->
-      <article class="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col">
-        <img src="images/i-want-you.jpg" alt="I Want You I Need You" class="h-40 w-full object-cover">
+      <!-- Repeatable card template -->
+      <!-- 1 -->
+      <article class="bg-[var(--midnight-light)] border border-bronze-dark rounded-2xl overflow-hidden flex flex-col">
+        <img src="./images/i-want-you.jpg" alt="I Want You I Need You" class="h-40 w-full object-cover">
         <div class="p-4 flex-1 flex flex-col">
           <h4 class="text-lg font-semibold mb-1">I Want You I Need You</h4>
-          <p class="text-xs text-slate-400 mb-3">Slow R&B / Romantic</p>
-          <audio controls class="w-full mt-auto">
-            <source src="audio/i-want-you.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+          <p class="text-xs text-gray-400 mb-3">Slow R&B / Romantic</p>
+          <audio controls preload="metadata" class="w-full mt-auto">
+            <source src="./audio/i-want-you.mp3" type="audio/mpeg" />
           </audio>
         </div>
       </article>
 
-      <!-- 2: My Moonlight Sonata -->
-      <article class="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col">
-        <img src="images/my-moonlight-sonata.jpg" alt="My Moonlight Sonata" class="h-40 w-full object-cover">
+      <!-- 2 -->
+      <article class="bg-[var(--midnight-light)] border border-bronze-dark rounded-2xl overflow-hidden flex flex-col">
+        <img src="./images/my-moonlight-sonata.jpg" alt="My Moonlight Sonata" class="h-40 w-full object-cover">
         <div class="p-4 flex-1 flex flex-col">
           <h4 class="text-lg font-semibold mb-1">My Moonlight Sonata</h4>
-          <p class="text-xs text-slate-400 mb-3">Cinematic R&B / Ballad</p>
-          <audio controls class="w-full mt-auto">
-            <source src="audio/my-moonlight-sonata.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+          <p class="text-xs text-gray-400 mb-3">Cinematic R&B / Ballad</p>
+          <audio controls preload="metadata" class="w-full mt-auto">
+            <source src="./audio/my-moonlight-sonata.mp3" type="audio/mpeg" />
           </audio>
         </div>
       </article>
 
-      <!-- 3: This Is How I Feel -->
-      <article class="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col">
-        <img src="images/this-is-how-i-feel.jpg" alt="This Is How I Feel" class="h-40 w-full object-cover">
+      <!-- 3 -->
+      <article class="bg-[var(--midnight-light)] border border-bronze-dark rounded-2xl overflow-hidden flex flex-col">
+        <img src="./images/this-is-how-i-feel.jpg" alt="This Is How I Feel" class="h-40 w-full object-cover">
         <div class="p-4 flex-1 flex flex-col">
           <h4 class="text-lg font-semibold mb-1">This Is How I Feel</h4>
-          <p class="text-xs text-slate-400 mb-3">Emotional R&B</p>
-          <audio controls class="w-full mt-auto">
-            <source src="audio/this-is-how-i-feel.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+          <p class="text-xs text-gray-400 mb-3">Emotional R&B</p>
+          <audio controls preload="metadata" class="w-full mt-auto">
+            <source src="./audio/this-is-how-i-feel.mp3" type="audio/mpeg" />
           </audio>
         </div>
       </article>
 
-      <!-- 4: You Make Me Fall in Love Again -->
-      <article class="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col">
-        <!-- reusing an existing image -->
-        <img src="images/i-want-you.jpg" alt="You Make Me Fall in Love Again" class="h-40 w-full object-cover opacity-90">
+      <!-- 4 -->
+      <article class="bg-[var(--midnight-light)] border border-bronze-dark rounded-2xl overflow-hidden flex flex-col">
+        <img src="./images/i-want-you.jpg" alt="You Make Me Fall in Love Again" class="h-40 w-full object-cover opacity-90">
         <div class="p-4 flex-1 flex flex-col">
           <h4 class="text-lg font-semibold mb-1">You Make Me Fall in Love Again</h4>
-          <p class="text-xs text-slate-400 mb-3">Modern R&B / Uplifting</p>
-          <audio controls class="w-full mt-auto">
-            <source src="audio/you-make-me-fall-in-love-again.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+          <p class="text-xs text-gray-400 mb-3">Modern R&B / Uplifting</p>
+          <audio controls preload="metadata" class="w-full mt-auto">
+            <source src="./audio/you-make-me-fall-in-love-again.mp3" type="audio/mpeg" />
           </audio>
         </div>
       </article>
 
-      <!-- 5: Let's Dance -->
-      <article class="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col">
-        <!-- reuse image -->
-        <img src="images/my-moonlight-sonata.jpg" alt="Let's Dance" class="h-40 w-full object-cover opacity-90">
+      <!-- 5 -->
+      <article class="bg-[var(--midnight-light)] border border-bronze-dark rounded-2xl overflow-hidden flex flex-col">
+        <img src="./images/my-moonlight-sonata.jpg" alt="Let's Dance" class="h-40 w-full object-cover opacity-90">
         <div class="p-4 flex-1 flex flex-col">
           <h4 class="text-lg font-semibold mb-1">Let’s Dance</h4>
-          <p class="text-xs text-slate-400 mb-3">Groovy / Funk-inspired</p>
-          <audio controls class="w-full mt-auto">
-            <source src="audio/lets-dance.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+          <p class="text-xs text-gray-400 mb-3">Groovy / Funk-inspired</p>
+          <audio controls preload="metadata" class="w-full mt-auto">
+            <source src="./audio/lets-dance.mp3" type="audio/mpeg" />
           </audio>
         </div>
       </article>
 
-      <!-- 6: Never Met Somebody Like You -->
-      <article class="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col">
-        <!-- reuse image -->
-        <img src="images/this-is-how-i-feel.jpg" alt="Never Met Somebody Like You" class="h-40 w-full object-cover opacity-90">
+      <!-- 6 -->
+      <article class="bg-[var(--midnight-light)] border border-bronze-dark rounded-2xl overflow-hidden flex flex-col">
+        <img src="./images/this-is-how-i-feel.jpg" alt="Never Met Somebody Like You" class="h-40 w-full object-cover opacity-90">
         <div class="p-4 flex-1 flex flex-col">
           <h4 class="text-lg font-semibold mb-1">Never Met Somebody Like You</h4>
-          <p class="text-xs text-slate-400 mb-3">Classic R&B / Vocal-heavy</p>
-          <audio controls class="w-full mt-auto">
-            <source src="audio/never-met-somebody-like-you.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
+          <p class="text-xs text-gray-400 mb-3">Classic R&B / Vocal-heavy</p>
+          <audio controls preload="metadata" class="w-full mt-auto">
+            <source src="./audio/never-met-somebody-like-you.mp3" type="audio/mpeg" />
           </audio>
         </div>
       </article>
@@ -150,62 +164,66 @@
 
   <!-- About -->
   <section id="about" class="max-w-6xl mx-auto px-4 py-10">
-    <div class="bg-slate-900/30 border border-slate-800 rounded-2xl p-6 md:p-8">
-      <h3 class="text-2xl font-semibold mb-3">About Azeem</h3>
-      <p class="text-slate-200 leading-relaxed mb-3">
+    <div class="bg-black/50 border border-bronze-dark rounded-2xl p-6 md:p-8">
+      <h3 class="text-2xl font-semibold mb-3 text-bronze">About Azeem</h3>
+      <p class="leading-relaxed mb-3 text-gray-200">
         I’m Azeem (Soule), R&B/Soul songwriter and composer with years of writing, arranging, and recording experience.
         I grew up on Stevie Wonder, Michael Jackson, R. Kelly, Gap Band, Kool & The Gang, and I love bringing that richness into modern tracks.
       </p>
-      <p class="text-slate-400 text-sm">
+      <p class="text-sm text-gray-400">
         If you’re an artist looking for original material, hooks, or toplines — reach out below.
       </p>
     </div>
   </section>
 
-  <!-- Contact for Collab -->
+  <!-- Contact -->
   <section id="contact" class="max-w-6xl mx-auto px-4 pb-14">
     <div class="grid gap-8 md:grid-cols-2 items-start">
       <div>
-        <h3 class="text-2xl font-semibold mb-3">Collab / Song request</h3>
-        <p class="text-slate-300 mb-3">
+        <h3 class="text-2xl font-semibold mb-3 text-bronze">Collab / Song request</h3>
+        <p class="text-gray-300 mb-3">
           Tell me about your project. This form will open your email client so you can send me the details.
         </p>
-        <p class="text-sm text-slate-500">Direct email: <a href="mailto:sallaoui79@gmail.com" class="text-amber-300 hover:text-amber-100">sallaoui79@gmail.com</a></p>
+        <p class="text-sm text-gray-400">
+          Direct email: <a href="mailto:sallaoui79@gmail.com" class="text-bronze hover:underline">sallaoui79@gmail.com</a>
+        </p>
       </div>
-      <form
-        action="mailto:sallaoui79@gmail.com"
-        method="post"
-        enctype="text/plain"
-        class="bg-slate-900/30 border border-slate-800 rounded-2xl p-6 flex flex-col gap-4"
-      >
+
+      <form action="mailto:sallaoui79@gmail.com" method="post" enctype="text/plain"
+        class="bg-black/50 border border-bronze-dark rounded-2xl p-6 flex flex-col gap-4">
         <div>
           <label for="name" class="block text-sm mb-1">Your name</label>
-          <input id="name" name="name" type="text" required class="w-full bg-slate-950/40 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300" />
+          <input id="name" name="name" type="text" required
+            class="w-full bg-[var(--midnight-light)] border border-bronze-dark rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--bronze)]" />
         </div>
         <div>
           <label for="email" class="block text-sm mb-1">Your email</label>
-          <input id="email" name="email" type="email" required class="w-full bg-slate-950/40 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300" />
+          <input id="email" name="email" type="email" required
+            class="w-full bg-[var(--midnight-light)] border border-bronze-dark rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--bronze)]" />
         </div>
         <div>
           <label for="message" class="block text-sm mb-1">Project details</label>
-          <textarea id="message" name="message" rows="4" class="w-full bg-slate-950/40 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-300" placeholder="Tell me what kind of R&B track you need..."></textarea>
+          <textarea id="message" name="message" rows="4"
+            class="w-full bg-[var(--midnight-light)] border border-bronze-dark rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--bronze)]"
+            placeholder="Tell me what kind of R&B track you need..."></textarea>
         </div>
-        <button type="submit" class="bg-amber-400 text-slate-950 rounded-lg py-2 text-sm font-semibold hover:bg-amber-300 transition">
+        <button type="submit"
+          class="bg-bronze text-black rounded-lg py-2 text-sm font-semibold hover:bg-bronze-dark transition">
           Send collaboration request
         </button>
-        <p class="text-xs text-slate-500">
-          If this doesn’t send on some phones, just email me directly: <span class="text-amber-200">sallaoui79@gmail.com</span>
+        <p class="text-xs text-gray-500">
+          If this doesn’t send on some phones, email me directly:
+          <span class="text-bronze">sallaoui79@gmail.com</span>
         </p>
       </form>
     </div>
   </section>
 
-  <footer class="border-t border-slate-900/40 py-6 text-center text-xs text-slate-500">
+  <footer class="border-t border-bronze-dark py-6 text-center text-xs text-gray-500">
     © <span id="year"></span> Azeem Beats. All rights reserved.
   </footer>
 
   <script>
-    // set current year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
